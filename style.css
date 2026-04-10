@@ -1,17 +1,67 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
 form {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: start;
 }
-form button {
+header form button {
   display: flex;
   justify-content: center;
-  align-items: middle;
+  align-items: center;
   margin: 0.5em;
   padding: 0.5em;
 }
 form img {
+  border-radius: 7px;
+}
+main button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0.5em;
-  border-radius: 5px;
+  padding: 0.5em;
+}
+
+span i {
+  padding: 0.5em;
+}
+
+small {
+  margin: 0.5em;
+  font-size: 0.7em;
+}
+
+.special-small {
+  font-size: 0.5em;
+}
+
+.carousel-item img {
+  transition: transform 0.4s ease;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.1);
+  z-index: 99;
+  position: relative;
+  cursor: pointer;
+}
+
+.carousel-inner {
+  overflow: visible;
+}
+
+.effetto-zoom {
+  transition: transform 0.3s ease;
+}
+
+.effetto-zoom:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  z-index: 99;
 }

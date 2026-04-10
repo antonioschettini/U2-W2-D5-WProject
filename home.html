@@ -1,11 +1,16 @@
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
   <head>
-    <title>Title</title>
+    <title>Homepage</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS v5.3.8 -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/6654-netflix-app_16x16.ico"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,15 +18,27 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
   </head>
 
-  <body>
+  <body background="dark" class="d-flex flex-column">
     <!-- Inizio Navbar -->
     <header>
       <nav class="navbar bg-dark navbar-expand-md bg-body-dark fluid">
         <div class="container-fluid">
           <a class="navbar-brand" href="./home.html"
             ><img
+              class="effetto-zoom"
               src="./assets/netflix_logo.png"
               alt="NetflixLogo"
               style="width: 100px"
@@ -39,7 +56,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <li class="nav-item effetto-zoom">
                 <a
                   class="nav-link active"
                   aria-current="page"
@@ -47,12 +64,12 @@
                   >Home</a
                 >
               </li>
-              <li class="nav-item">
+              <li class="nav-item effetto-zoom">
                 <a class="nav-link active" href="#">Tv Show</a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown effetto-zoom">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle effetto-zoom"
                   href="./setting.html"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -60,39 +77,50 @@
                 >
                   Setting
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu effetto-zoom">
                   <li>
-                    <a class="dropdown-item" href="./setting.html">Setting</a>
+                    <a class="dropdown-item effetto-zoom" href="./setting.html"
+                      >Setting</a
+                    >
                   </li>
                   <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item" href="#">Subscribe</a></li>
+                  <li>
+                    <a class="dropdown-item effetto-zoom" href="#">Subscribe</a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">My List</a>
+                <a class="nav-link effetto-zoom" href="#">My List</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <button class="btn btn-outline-danger text-white" type="submit">
-                <ion-icon name="search"></ion-icon>
+              <button
+                class="btn btn-dark border-danger effetto-zoom"
+                type="submit"
+              >
+                <i class="bi bi-search"></i>
               </button>
               <img
+                class="effetto-zoom"
                 src="./assets/kids_icon.png"
                 alt="kidslogo"
-                style="width: 40px"
+                style="width: 38px"
               />
-              <button class="btn btn-outline-danger text-white" type="submit">
-                <ion-icon name="notifications-outline"></ion-icon>
+              <button
+                class="btn btn-dark border-danger effetto-zoom"
+                type="submit"
+              >
+                <i class="bi bi-bell"></i>
               </button>
               <img
-                class="profile"
+                class="profile effetto-zoom"
                 src="./assets/avatar.png"
                 alt="kidslogo"
-                style="width: 40px"
+                style="width: 38px"
               />
               <li class="nav-item dropdown list-unstyled">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle effetto-zoom"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -101,11 +129,19 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end list-unstyled">
                   <li>
-                    <a class="dropdown-item" href="./profile.html">Profile</a>
+                    <a class="dropdown-item effetto-zoom" href="./profile.html"
+                      >Profile</a
+                    >
                   </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="#">Contact Us</a>
+                    <a class="dropdown-item effetto-zoom" href="#"
+                      >Contact Us</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item effetto-zoom" href="#">Logout</a>
                   </li>
                 </ul>
               </li>
@@ -115,11 +151,592 @@
       </nav>
     </header>
     <!-- Fine Navbar -->
-    <main></main>
-    <footer>
-      <!-- place footer here -->
+    <main style="flex: 1">
+      <!-- Inizio sezione Hero -->
+      <div class="container-fluid px-4 py-3">
+        <div class="row">
+          <div class="col d-flex align-items-center flex-grow-1">
+            <h1 class="mb-0 me-3 text-white">Tv Show</h1>
+
+            <div class="dropdown">
+              <button
+                class="btn btn-dark border-danger dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                Genres
+              </button>
+              <ul class="dropdown-menu effetto-zoom">
+                <li>
+                  <a class="dropdown-item effetto-zoom" href="#">Action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item effetto-zoom" href="#">Comedy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-auto">
+            <button
+              class="btn btn-dark border-danger effetto-zoom"
+              type="submit"
+            >
+              <i class="bi bi-list"></i>
+            </button>
+            <button
+              class="btn btn-dark border-danger effetto-zoom"
+              type="submit"
+            >
+              <i class="bi bi-grid"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Fine sezione Hero -->
+      <!-- Inizio Carosello 1 -->
+      <div class="container-fluid px-4 py-3">
+        <h3>Trending Now</h3>
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="cointainer-fluid">
+                <div class="row g-1">
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media12.jpg"
+                      class="d-block w-100"
+                      alt="movie12"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media13.jpg"
+                      class="d-block w-100"
+                      alt="movie13"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media14.webp"
+                      class="d-block w-100"
+                      alt="movie14"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media15.jpg"
+                      class="d-block w-100"
+                      alt="movie15"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media16.webp"
+                      class="d-block w-100"
+                      alt="movie16"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media17.jpg"
+                      class="d-block w-100"
+                      alt="movie17"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cointainer-fluid">
+                <div class="row g-1">
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media6.jpg"
+                      class="d-block w-100"
+                      alt="movie6"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media7.webp"
+                      class="d-block w-100"
+                      alt="movie7"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media8.webp"
+                      class="d-block w-100"
+                      alt="movie8"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media9.jpg"
+                      class="d-block w-100"
+                      alt="movie9"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media10.jpg"
+                      class="d-block w-100"
+                      alt="movie10"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media11.jpg"
+                      class="d-block w-100"
+                      alt="movie11"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- Fine Carosello 1 -->
+      <!-- Inizio Carosello 2 -->
+      <div class="container-fluid px-4 py-3">
+        <h3>Watch It Again</h3>
+        <div id="carouselExample2" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="cointainer-fluid">
+                <div class="row g-1">
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media0.webp"
+                      class="d-block w-100"
+                      alt="movie0"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media1.jpg"
+                      class="d-block w-100"
+                      alt="movie1"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media2.webp"
+                      class="d-block w-100"
+                      alt="movie2"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media3.webp"
+                      class="d-block w-100"
+                      alt="movie3"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media4.jpg"
+                      class="d-block w-100"
+                      alt="movie4"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media5.webp"
+                      class="d-block w-100"
+                      alt="movie5"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cointainer-fluid">
+                <div class="row g-1">
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media27.jpg"
+                      class="d-block w-100"
+                      alt="movie27"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media28.jpg"
+                      class="d-block w-100"
+                      alt="movie28"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media29.jpg"
+                      class="d-block w-100"
+                      alt="movie29"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media30.jpg"
+                      class="d-block w-100"
+                      alt="movie30"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media31.webp"
+                      class="d-block w-100"
+                      alt="movie31"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media32.jpg"
+                      class="d-block w-100"
+                      alt="movie32"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample2"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample2"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- Fine Carosello 2 -->
+      <!-- Inizio Carosello 3 -->
+      <div class="container-fluid px-4 py-3">
+        <h3>Now Release</h3>
+        <div id="carouselExample3" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="cointainer-fluid">
+                <div class="row g-1">
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media18.jpg"
+                      class="d-block w-100"
+                      alt="movie18"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media19.webp"
+                      class="d-block w-100"
+                      alt="movie19"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media20.jpg"
+                      class="d-block w-100"
+                      alt="movie20"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media21.webp"
+                      class="d-block w-100"
+                      alt="movie21"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media22.webp"
+                      class="d-block w-100"
+                      alt="movie22"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media23.webp"
+                      class="d-block w-100"
+                      alt="movie23"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cointainer-fluid">
+                <div class="row g-1">
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media24.jpg"
+                      class="d-block w-100"
+                      alt="movie24"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media25.webp"
+                      class="d-block w-100"
+                      alt="movie25"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media26.webp"
+                      class="d-block w-100"
+                      alt="movie26"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media27.jpg"
+                      class="d-block w-100"
+                      alt="movie27"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media28.jpg"
+                      class="d-block w-100"
+                      alt="movie28"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media28.jpg"
+                      class="d-block w-100"
+                      alt="movie28"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample3"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample3"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- Fine Carosello 3 -->
+      <!-- Inizio Carosello 4 -->
+      <!-- Inizio Carosello 1 -->
+      <div class="container-fluid px-4 py-3">
+        <h3>For You</h3>
+        <div id="carouselExample4" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="cointainer-fluid">
+                <div class="row g-1">
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media7.webp"
+                      class="d-block w-100"
+                      alt="movie7"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media14.webp"
+                      class="d-block w-100"
+                      alt="movie14"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media5.webp"
+                      class="d-block w-100"
+                      alt="movie5"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media9.jpg"
+                      class="d-block w-100"
+                      alt="movie9"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media30.jpg"
+                      class="d-block w-100"
+                      alt="movie30"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media13.jpg"
+                      class="d-block w-100"
+                      alt="movie13"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cointainer-fluid">
+                <div class="row g-1">
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media8.webp"
+                      class="d-block w-100"
+                      alt="movie8"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media22.webp"
+                      class="d-block w-100"
+                      alt="movie22"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media17.jpg"
+                      class="d-block w-100"
+                      alt="movie17"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media1.jpg"
+                      class="d-block w-100"
+                      alt="movie1"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media21.webp"
+                      class="d-block w-100"
+                      alt="movie21"
+                    />
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <img
+                      src="./assets/media/media10.jpg"
+                      class="d-block w-100"
+                      alt="movie10"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample4"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample4"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- Fine Carosello 4 -->
+    </main>
+    <!-- Inizio Footer -->
+    <footer class="pt-5 pb-1">
+      <div class="container">
+        <div class="d-flex mb-4">
+          <span class="me-3"><i class="fab fa-facebook-square"></i></span>
+          <span class="me-3"><i class="fab fa-instagram"></i></span>
+          <span class="me-3"><i class="fab fa-twitter"></i></span>
+          <span><i class="fab fa-youtube"></i></span>
+        </div>
+
+        <div class="row text-secondary">
+          <div class="col-6 col-md-3 d-flex flex-column mb-3">
+            <small class="mb-2">Audio and Subtitles</small>
+            <small class="mb-2">Media Center</small>
+            <small class="mb-2">Privacy</small>
+            <small class="mb-2">Contact Us</small>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex flex-column mb-3">
+            <small class="mb-2">Audio Description</small>
+            <small class="mb-2">Investor Relations</small>
+            <small class="mb-2">Legal Notices</small>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex flex-column mb-3">
+            <small class="mb-2">Help Center</small>
+            <small class="mb-2">Jobs</small>
+            <small class="mb-2">Cookie Preferences</small>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex flex-column mb-3">
+            <small class="mb-2">Gift Cards</small>
+            <small class="mb-2">Terms of Use</small>
+            <small class="mb-2">Corporate Information</small>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-start mt-3">
+          <button
+            class="btn btn-dark border-danger btn-sm mb-3 text-secondary"
+            type="button"
+          >
+            Service Code
+          </button>
+          <small class="text-secondary" style="font-size: 0.7rem">
+            © 1997-2019 Netflix, Inc. {i-0d00fcda2fdf9c0de}
+          </small>
+        </div>
+      </div>
     </footer>
-    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <!-- Inizio Footer -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

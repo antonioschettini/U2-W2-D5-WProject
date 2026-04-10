@@ -1,33 +1,441 @@
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
   <head>
-    <title>Title</title>
+    <title>Settings</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS v5.3.8 -->
     <link
+      rel="icon"
+      type="image/png"
+      href="./assets/6654-netflix-app_16x16.ico"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
   </head>
 
-  <body>
+  <body class="d-flex flex-column">
+    <!-- inizio Navbar -->
     <header>
-      <!-- place navbar here -->
+      <nav class="navbar bg-dark navbar-expand-md bg-body-dark fluid">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./home.html"
+            ><img
+              class="effetto-zoom"
+              src="./assets/netflix_logo.png"
+              alt="NetflixLogo"
+              style="width: 100px"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item effetto-zoom">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item effetto-zoom">
+                <a class="nav-link active" href="#">Tv Show</a>
+              </li>
+              <li class="nav-item dropdown effetto-zoom">
+                <a
+                  class="nav-link dropdown-toggle effetto-zoom"
+                  href="./setting.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Setting
+                </a>
+                <ul class="dropdown-menu effetto-zoom">
+                  <li>
+                    <a class="dropdown-item effetto-zoom" href="./setting.html"
+                      >Setting</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item effetto-zoom" href="#">Subscribe</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link effetto-zoom" href="#">My List</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <button
+                class="btn btn-dark border-danger effetto-zoom"
+                type="submit"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+              <img
+                class="effetto-zoom"
+                src="./assets/kids_icon.png"
+                alt="kidslogo"
+                style="width: 38px"
+              />
+              <button
+                class="btn btn-dark border-danger effetto-zoom"
+                type="submit"
+              >
+                <i class="bi bi-bell"></i>
+              </button>
+              <img
+                class="profile effetto-zoom"
+                src="./assets/avatar.png"
+                alt="kidslogo"
+                style="width: 38px"
+              />
+              <li class="nav-item dropdown list-unstyled">
+                <a
+                  class="nav-link dropdown-toggle effetto-zoom"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end list-unstyled">
+                  <li>
+                    <a class="dropdown-item effetto-zoom" href="./profile.html"
+                      >Profile</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item effetto-zoom" href="#"
+                      >Contact Us</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item effetto-zoom" href="#">Logout</a>
+                  </li>
+                </ul>
+              </li>
+            </form>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main></main>
-    <footer>
-      <!-- place footer here -->
+    <!-- Fine Navbar -->
+    <!-- inizio sezione Hero -->
+    <main class="container py-5 mt-0 text-white" style="max-width: 1200px">
+      <h1 class="mb-4">Account</h1>
+      <hr class="border-secondary mb-0" />
+
+      <div class="row py-3">
+        <div class="col-12 col-md-3 text-secondary">
+          <h6 class="mb-3">MEMBERSHIP & BILLING</h6>
+          <button
+            class="btn btn-dark border-danger btn-sm mb-3 text-secondary mx-0 my-0 text-center"
+            type="button"
+          >
+            Cancel Membership
+          </button>
+        </div>
+
+        <div class="col-12 col-md-9">
+          <div class="d-flex justify-content-between mb-2">
+            <div>
+              <strong class="d-block text-white">student@strive.school</strong>
+              <span class="text-secondary">Password: ********</span><br />
+              <span class="text-secondary">Phone: 321 044 1279</span>
+            </div>
+            <div class="text-end">
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary mb-1"
+                >Change account email</a
+              >
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary mb-1"
+                >Change password</a
+              >
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary"
+                >Change phone number</a
+              >
+            </div>
+          </div>
+
+          <hr class="border-secondary my-3" />
+
+          <div class="d-flex justify-content-between mb-2">
+            <div>
+              <span class="text-white fw-bold"
+                ><i class="fab fa-paypal me-2"></i>Paypal
+                admin@strive.school</span
+              >
+            </div>
+            <div class="text-end">
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary mb-1"
+                >Update payment info</a
+              >
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary"
+                >Billing details</a
+              >
+            </div>
+          </div>
+
+          <hr class="border-secondary my-3" />
+
+          <div class="d-flex justify-content-end">
+            <div class="text-end">
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary mb-1"
+                >Redeem gift card or promo code</a
+              >
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary"
+                >Where to buy gift cards</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-secondary mt-0" />
+
+      <div class="row py-3">
+        <div class="col-12 col-md-3 text-secondary">
+          <h6>PLAN DETAILS</h6>
+        </div>
+        <div class="col-12 col-md-9">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <span class="text-white fw-bold me-2">Premium</span>
+              <span class="border border-white px-2 py-0 small fw-bold"
+                >ULTRA HD</span
+              >
+            </div>
+            <div class="text-end">
+              <a href="#" class="text-decoration-none small text-primary"
+                >Change plan</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-secondary mt-0" />
+
+      <div class="row py-3">
+        <div class="col-12 col-md-3 text-secondary">
+          <h6>SETTINGS</h6>
+        </div>
+        <div class="col-12 col-md-9">
+          <div class="row row-cols-1">
+            <div class="col">
+              <a
+                href="#"
+                class="text-decoration-none small text-primary d-block mb-1"
+                >Parental controls</a
+              >
+            </div>
+            <div class="col">
+              <a
+                href="#"
+                class="text-decoration-none small text-primary d-block mb-1"
+                >Test participation</a
+              >
+            </div>
+            <div class="col">
+              <a
+                href="#"
+                class="text-decoration-none small text-primary d-block mb-1"
+                >Manage download devices</a
+              >
+            </div>
+            <div class="col">
+              <a
+                href="#"
+                class="text-decoration-none small text-primary d-block mb-1"
+                >Activate a device</a
+              >
+            </div>
+            <div class="col">
+              <a
+                href="#"
+                class="text-decoration-none small text-primary d-block mb-1"
+                >Recent device streaming activity</a
+              >
+            </div>
+            <div class="col">
+              <a
+                href="#"
+                class="text-decoration-none small text-primary d-block mb-1"
+                >Sign out of all devices</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-secondary mt-0" />
+
+      <div class="row py-3">
+        <div class="col-12 col-md-3 text-secondary">
+          <h6>MY PROFILE</h6>
+        </div>
+        <div class="col-12 col-md-9">
+          <div class="d-flex justify-content-between align-items-start mb-4">
+            <div class="d-flex align-items-center">
+              <img
+                src="./assets/avatar.png"
+                width="30"
+                class="rounded-1 me-2"
+                alt="avatar"
+              />
+              <strong class="text-white">Strive Student</strong>
+            </div>
+            <div class="text-end">
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary mb-1"
+                >Manage profiles</a
+              >
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary"
+                >Add profile email</a
+              >
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary mb-1"
+                >Language</a
+              >
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary mb-1"
+                >Playback settings</a
+              >
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary mb-1"
+                >Subtitle appearance</a
+              >
+            </div>
+            <div class="col-12 col-md-6">
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary mb-1"
+                >Viewing activity</a
+              >
+              <a
+                href="#"
+                class="d-block text-decoration-none small text-primary mb-1"
+                >Ratings</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-secondary mt-0" />
+    </main>
+    <!-- Fine sezione Hero -->
+    <!-- Inizio Footer -->
+    <footer class="pt-0 pb-1">
+      <div class="container">
+        <div class="d-flex mb-4">
+          <span class="me-3"><i class="fab fa-facebook-square"></i></span>
+          <span class="me-3"><i class="fab fa-instagram"></i></span>
+          <span class="me-3"><i class="fab fa-twitter"></i></span>
+          <span><i class="fab fa-youtube"></i></span>
+        </div>
+
+        <div class="row text-secondary">
+          <div class="col-6 col-md-3 d-flex flex-column mb-3">
+            <small class="mb-2">Audio and Subtitles</small>
+            <small class="mb-2">Media Center</small>
+            <small class="mb-2">Privacy</small>
+            <small class="mb-2">Contact Us</small>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex flex-column mb-3">
+            <small class="mb-2">Audio Description</small>
+            <small class="mb-2">Investor Relations</small>
+            <small class="mb-2">Legal Notices</small>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex flex-column mb-3">
+            <small class="mb-2">Help Center</small>
+            <small class="mb-2">Jobs</small>
+            <small class="mb-2">Cookie Preferences</small>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex flex-column mb-3">
+            <small class="mb-2">Gift Cards</small>
+            <small class="mb-2">Terms of Use</small>
+            <small class="mb-2">Corporate Information</small>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-start mt-3">
+          <button
+            class="btn btn-dark border-danger btn-sm mb-3 text-secondary"
+            type="button"
+          >
+            Service Code
+          </button>
+          <small class="text-secondary" style="font-size: 0.7rem">
+            © 1997-2019 Netflix, Inc. {i-0d00fcda2fdf9c0de}
+          </small>
+        </div>
+      </div>
     </footer>
-    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <!-- Inizio Footer -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
   </body>
 </html>

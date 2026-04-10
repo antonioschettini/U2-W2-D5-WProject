@@ -1,33 +1,321 @@
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
   <head>
-    <title>Title</title>
+    <title>Profile</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS v5.3.8 -->
     <link
+      rel="icon"
+      type="image/png"
+      href="./assets/6654-netflix-app_16x16.ico"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
   </head>
 
-  <body>
+  <body class="d-flex flex-column">
+    <!-- inizio Navbar -->
     <header>
-      <!-- place navbar here -->
+      <nav class="navbar bg-dark navbar-expand-md bg-body-dark fluid">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./home.html"
+            ><img
+              class="effetto-zoom"
+              src="./assets/netflix_logo.png"
+              alt="NetflixLogo"
+              style="width: 100px"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item effetto-zoom">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item effetto-zoom">
+                <a class="nav-link active" href="#">Tv Show</a>
+              </li>
+              <li class="nav-item dropdown effetto-zoom">
+                <a
+                  class="nav-link dropdown-toggle effetto-zoom"
+                  href="./setting.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Setting
+                </a>
+                <ul class="dropdown-menu effetto-zoom">
+                  <li>
+                    <a class="dropdown-item effetto-zoom" href="./setting.html"
+                      >Setting</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item effetto-zoom" href="#">Subscribe</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link effetto-zoom" href="#">My List</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <button
+                class="btn btn-dark border-danger effetto-zoom"
+                type="submit"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+              <img
+                class="effetto-zoom"
+                src="./assets/kids_icon.png"
+                alt="kidslogo"
+                style="width: 38px"
+              />
+              <button
+                class="btn btn-dark border-danger effetto-zoom"
+                type="submit"
+              >
+                <i class="bi bi-bell"></i>
+              </button>
+              <img
+                class="profile effetto-zoom"
+                src="./assets/avatar.png"
+                alt="kidslogo"
+                style="width: 38px"
+              />
+              <li class="nav-item dropdown list-unstyled">
+                <a
+                  class="nav-link dropdown-toggle effetto-zoom"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end list-unstyled">
+                  <li>
+                    <a class="dropdown-item effetto-zoom" href="./profile.html"
+                      >Profile</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item effetto-zoom" href="#"
+                      >Contact Us</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item effetto-zoom" href="#">Logout</a>
+                  </li>
+                </ul>
+              </li>
+            </form>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main></main>
-    <footer>
-      <!-- place footer here -->
+    <!-- Fine Navbar -->
+    <!-- inizio sezione Hero -->
+    <main
+      class="container py-5 text-center text-md-start mb-5 flex-fill"
+      style="max-width: 850px"
+      style="flex: 1"
+    >
+      <div class="container">
+        <h1 class="text-center mb-0">Edit Profile</h1>
+        <hr class="border-secondary mb-4" />
+      </div>
+      <div class="container d-flex justify-content-center align-items-center">
+        <div class="row">
+          <div class="col-12 col-md-4 mb-4 mb-md-0 my-0 position-relative">
+            <img
+              src="./assets/avatar.png"
+              class="img-fluid rounded-1"
+              alt="avatar"
+            />
+          </div>
+          <div class="col-12 col-md-8">
+            <div>
+              <button
+                class="btn btn-dark border-danger btn-sm mb-3 text-secondary mx-0 my-0 w-100 text-start"
+                type="button"
+              >
+                Strive Student
+              </button>
+              <p class="mx-0 my-1">Language:</p>
+              <div class="dropdown">
+                <button
+                  class="btn btn-dark border-danger dropdown-toggle mx-0 my-1"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Select Language
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                  <li><a class="dropdown-item" href="#">Italian</a></li>
+                  <li><a class="dropdown-item" href="#">Japanese</a></li>
+                </ul>
+              </div>
+              <hr class="border-secondary mb-4 mx-0" />
+              <p class="mb-0 mx-0 my-0">Maturity Settings:</p>
+              <button
+                class="btn btn-dark border-danger btn-sm mb-3 text-secondary mx-0 my-1"
+                type="button"
+              >
+                ALL MATURITY RATING
+              </button>
+              <p class="mx-0 my-0">
+                Show titles of all maturity ratings for this profile.
+              </p>
+              <button
+                class="btn btn-dark border-danger btn-sm mb-3 text-secondary mx-0 my-1"
+                type="button"
+              >
+                EDIT
+              </button>
+              <hr class="border-secondary mb-4 mx-0 my-0" />
+              <p class="mx-0 my-1">Autoplay controls</p>
+
+              <label
+                class="d-flex align-items-center justify-content-center justify-content-md-start"
+                for="checkbox"
+              >
+                <input type="checkbox" /><small
+                  >Autoplay next episode in a series on all devices.</small
+                ></label
+              >
+              <label
+                class="d-flex align-items-center justify-content-center justify-content-md-start"
+                for="checkbox"
+              >
+                <input type="checkbox" /><small
+                  >Autoplay previews while browsing on all devices.</small
+                ></label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container flex justify-content-center align-items-center text-center"
+      >
+        <hr class="border-secondary mb-3 mx-0 my-3" />
+        <button
+          class="btn btn-dark border-danger btn-sm mb-3 text-white"
+          type="button"
+        >
+          SAVE
+        </button>
+
+        <button
+          class="btn btn-dark border-danger btn-sm mb-3 text-white"
+          type="button"
+        >
+          CANCEL
+        </button>
+        <button
+          class="btn btn-dark border-danger btn-sm mb-3 text-white"
+          type="button"
+        >
+          DELETE PROFILE
+        </button>
+      </div>
+    </main>
+    <!-- Fine sezione Hero -->
+    <!-- Inizio Footer -->
+    <footer class="pt-5 pb-1">
+      <div class="container">
+        <div class="d-flex mb-4">
+          <span class="me-3"><i class="fab fa-facebook-square"></i></span>
+          <span class="me-3"><i class="fab fa-instagram"></i></span>
+          <span class="me-3"><i class="fab fa-twitter"></i></span>
+          <span><i class="fab fa-youtube"></i></span>
+        </div>
+
+        <div class="row text-secondary">
+          <div class="col-6 col-md-3 d-flex flex-column mb-3">
+            <small class="mb-2">Audio and Subtitles</small>
+            <small class="mb-2">Media Center</small>
+            <small class="mb-2">Privacy</small>
+            <small class="mb-2">Contact Us</small>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex flex-column mb-3">
+            <small class="mb-2">Audio Description</small>
+            <small class="mb-2">Investor Relations</small>
+            <small class="mb-2">Legal Notices</small>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex flex-column mb-3">
+            <small class="mb-2">Help Center</small>
+            <small class="mb-2">Jobs</small>
+            <small class="mb-2">Cookie Preferences</small>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex flex-column mb-3">
+            <small class="mb-2">Gift Cards</small>
+            <small class="mb-2">Terms of Use</small>
+            <small class="mb-2">Corporate Information</small>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-start mt-3">
+          <button
+            class="btn btn-dark border-danger btn-sm mb-3 text-secondary"
+            type="button"
+          >
+            Service Code
+          </button>
+          <small class="text-secondary" style="font-size: 0.7rem">
+            © 1997-2019 Netflix, Inc. {i-0d00fcda2fdf9c0de}
+          </small>
+        </div>
+      </div>
     </footer>
-    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <!-- Inizio Footer -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
   </body>
 </html>
