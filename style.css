@@ -1,0 +1,17 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+}
+form button {
+  display: flex;
+  justify-content: center;
+  align-items: middle;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+form img {
+  margin: 0.5em;
+  border-radius: 5px;
+}
